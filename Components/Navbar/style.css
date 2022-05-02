@@ -1,0 +1,130 @@
+.navbar {
+  background: var(--main-color);
+  display: block;
+  height: 75px;
+  padding: 0 100px;
+  transition: 0.3s;
+  -webkit-transition: 0.3s;
+  -moz-transition: 0.3s;
+  -ms-transition: 0.3s;
+  -o-transition: 0.3s;
+}
+
+.navbar .Box-nav {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 100%;
+}
+
+.navbar .Box-nav .nav-links {
+  position: relative;
+  z-index: 1;
+  transition: 0.3s;
+  -webkit-transition: 0.3s;
+  -moz-transition: 0.3s;
+  -ms-transition: 0.3s;
+  -o-transition: 0.3s;
+}
+
+.navbar .Box-nav .nav-links .icon {
+  width: 35px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+}
+
+.navbar .Box-nav .nav-links .icon span {
+  background-color: #fff;
+  height: 3px;
+  margin-bottom: 5px;
+}
+
+.navbar .Box-nav .nav-links .icon span:first-of-type {
+  width: 100%;
+}
+
+.navbar .Box-nav .nav-links .icon span:nth-child(2) {
+  width: 50%;
+}
+
+.navbar .Box-nav .nav-links .icon span:last-of-type {
+  width: 100%;
+}
+
+.navbar .Box-nav .nav-links ul {
+  display: none;
+  position: absolute;
+  padding: 0;
+  right: -5px;
+  top: calc(100% + 8px);
+  width: 160px;
+  list-style: none;
+  background: #f6f6f6;
+  border: 2px solid #ccc;
+  margin: 0;
+  border-radius: 15px;
+}
+
+.navbar .Box-nav .nav-links ul::before {
+  content: "";
+  position: absolute;
+  right: 8px;
+  top: -21px;
+  border-width: 10px;
+  border-style: solid;
+  border-color: transparent transparent #ccc transparent;
+}
+
+.navbar .Box-nav .nav-links ul li {
+  padding: 10px 30px 10px 14px;
+  transition: 0.3s;
+  -webkit-transition: 0.3s;
+  -moz-transition: 0.3s;
+  -ms-transition: 0.3s;
+  -o-transition: 0.3s;
+}
+
+.navbar .Box-nav .nav-links ul li:not(:last-of-type) {
+  border-bottom: 2px solid #ddd;
+}
+
+.navbar .Box-nav .nav-links ul li .link {
+  color: var(--color-font);
+  font-size: 19px;
+  font-weight: 400;
+}
+
+.navbar .Box-nav .nav-links ul li .link:hover {
+  text-decoration: none;
+}
+
+.navbar .Box-nav .nav-links ul li:hover {
+  padding-left: 30px;
+}
+
+.navbar .Box-nav .nav-links:hover .icon span:nth-child(2) {
+  width: 100%;
+}
+
+.navbar .Box-nav .nav-links:hover ul {
+  display: block;
+}
+
+@media (max-width: 768px) {
+  .navbar {
+    padding: 0 30px;
+  }
+}
+/*# sourceMappingURL=style.css.map */

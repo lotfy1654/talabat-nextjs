@@ -1,3 +1,10 @@
+.imageWrapper div:first-child{
+    position: "static !important"
+
+}
+
+
+
 .container {
   padding: 0 2rem;
 }
