@@ -1,4 +1,5 @@
 import React from "react";
+import Link from "next/link"
 import Image from "next/image";
 import LogoImg from "/images/logo-tlb.svg";
 import FristBenfit from "/images/benefits-1.png";
@@ -29,7 +30,7 @@ class Partner extends React.Component {
             <div className="logo-head">
               <Image src={LogoImg} alt="." />
               <div>
-                <a href="/partner">Vendor Portal</a>
+                <Link href="/partner">Vendor Portal</Link>
               </div>
             </div>
             <div className="partner-form-section">
@@ -166,7 +167,7 @@ class Partner extends React.Component {
               <h1>Benefits of our own delivery</h1>
               <div className="benefits-delivery-boxs">
                 <div className="row">
-                  <div className="col-sm col-md-4">
+                  <div className="col-sm col-md-4 mt-3 mb-3">
                     <div className="box">
                       <Image src={FristDeliver} alt="." />
                       <h4>Live tracking</h4>
@@ -180,7 +181,7 @@ class Partner extends React.Component {
                       </div>
                     </div>
                   </div>
-                  <div className="col-sm col-md-4">
+                  <div className="col-sm col-md-4 mt-3 mb-3">
                     <div className="box">
                       <Image src={SecDelivery} alt="." />
                       <h4>Great delivery prices</h4>
@@ -193,7 +194,7 @@ class Partner extends React.Component {
                       </div>
                     </div>
                   </div>
-                  <div className="col-sm col-md-4">
+                  <div className="col-sm col-md-4 mt-3 mb-3">
                     <div className="box">
                       <Image src={ThirdDeliver} alt="." />
                       <h4>Live tracking</h4>
@@ -254,8 +255,10 @@ class Partner extends React.Component {
               </div>
               <div className="box-item">
                 <div className="box-apps">
-                  <Image className="app-img" src={GooglePlay} alt="." />
-                  <Image className="app-img" src={AppStore} alt="." />
+                  <img className="app-img" src={`https://ae.partner.talabat.com/resource/SSUTalabat/assets/images/google_play.svg`} alt="." />
+                  {/* <span className="mr-3"> */}
+                  {/* </span> */}
+                  <img className="app-img" src={`https://ae.partner.talabat.com/resource/SSUTalabat/assets/images/appstore.svg`} alt="." />
                 </div>
               </div>
             </div>
