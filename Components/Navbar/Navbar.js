@@ -1,19 +1,34 @@
+import { useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import Logo from "../../images/logo.svg";
+import { AiOutlineCloseCircle } from "react-icons/ai"
 
 function Navbar() {
+  const showNav = () => {
+    var navItems = document.getElementById("navBar");
+    navItems.classList.add("show-nav")
+  }
+  const hideNav = () => {
+    var navItems = document.getElementById("navBar");
+    if (navItems.classList.value === "show-nav") {
+      navItems.classList.remove("show-nav")
+    }
+  }
   return (
     <div className="navbar">
       <div className="Box-nav">
         <Image src={Logo} alt="home" />
         <div className="nav-links">
-          <span className="icon">
+          <span className="icon" id="show-nav-btn" onClick={showNav}>
             <span></span>
             <span></span>
             <span></span>
           </span>
-          <ul>
+          <ul id="navBar">
+            <li className="close-nav" onClick={hideNav}>
+              <span><AiOutlineCloseCircle /></span>
+            </li>
             <li>
               <Link className="link" href="/">
                 Home
@@ -34,7 +49,7 @@ function Navbar() {
                 Restaurants
               </Link>
             </li>
-            <li>
+            <li className="login-nav-link">
               <Link className="link" href="/login">
                 Login
               </Link>

@@ -11,8 +11,26 @@ import {
 } from "react-icons/fa";
 
 export default function Footer() {
+  const handleFooter = () => {
+    let items = document.querySelectorAll(".footer-sm .item")
+    let itemsHead = document.querySelectorAll(".footer-sm .item .item-head")
+    let itemsLinks = document.querySelectorAll(".footer-sm .item .item-link")
+    items.forEach((ele, index) => {
+      ele.addEventListener("click", (item) => {
+        if (itemsHead[index].classList.contains("hide-items")) {
+          itemsHead[index].classList.remove("hide-items")
+          itemsHead[index].classList.add("show-items")
+          itemsLinks[index].classList.add("show-links")
+        } else {
+          itemsHead[index].classList.add("hide-items")
+          itemsHead[index].classList.remove("show-items")
+          itemsLinks[index].classList.remove("show-links")
+        }
+      })
+    })
+  }
   return (
-    <div className="footer">
+    <div className="footer" onClick={handleFooter}>
       <div className="container">
         <div className="footer-head">
           <Link href="/">feedback</Link>
@@ -80,7 +98,7 @@ export default function Footer() {
         <div className="footer-sm">
           <div className="footer-sm-items">
             <div className="item">
-              <div className="item-head">
+              <div className="item-head hide-items">
                 <h6>Restaurants</h6>
                 <div className="show">
                   <FaArrowDown />
@@ -99,7 +117,7 @@ export default function Footer() {
               </div>
             </div>
             <div className="item">
-              <div className="item-head">
+              <div className="item-head hide-items">
                 <h6>Popular Cuisines</h6>
                 <div className="show">
                   <FaArrowDown />
@@ -117,7 +135,7 @@ export default function Footer() {
               </div>
             </div>
             <div className="item">
-              <div className="item-head">
+              <div className="item-head hide-items">
                 <h6>Popular Areas</h6>
                 <div className="show">
                   <FaArrowDown />
