@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 import Link from "next/link";
 import ReactPaginate from "react-paginate";
 import SearchComponent from "./Search";
+import Footer from "../../Components/Footer/Footer"
 
 
 export default class Restaurants extends React.Component {
@@ -28,15 +29,19 @@ export default class Restaurants extends React.Component {
 
         const postData = slice.map((ele) => (
             <React.Fragment key={ele.id}>
-                <div className="res-item">
-                    <img className="res-img" src={ele.thumbnailUrl} alt={ele.id} />
-                    <div className="info-item">
-                        <Link href={`/restaurants/${ele.id}`}>
-                            <p>{`${ele.title.substring(0, 13)}`}</p>
-                        </Link>
-                        <p>{`${ele.title.substring(0, 19)}..${ele.id}..`}</p>
+                <Link href={`/restaurants/${ele.id}`}>
+                    <div className="res-item">
+                        <img className="res-img" src={ele.thumbnailUrl} alt={ele.id} />
+                        <div className="info-item">
+                            <div>
+                                <p>
+                                    {`${ele.title.substring(0, 13)}`}
+                                </p>
+                                <p>{`${ele.title.substring(0, 19)}..${ele.id}..`}</p>
+                            </div>
+                        </div>
                     </div>
-                </div>
+                </Link>
             </React.Fragment>
         ))
         this.setState({
@@ -79,15 +84,10 @@ export default class Restaurants extends React.Component {
             })
             this.filterData()
         }
-        console.log(e.target.value.trim())
     }
 
-    //  reprehenderit
-    //  officia porro
-
-
     filterData() {
-        let { getDataSearch, resNeed, showAllData, showSearchData } = this.state
+        let { resNeed } = this.state
         let { allRestaurents } = this.props
         let dataget = allRestaurents.filter(item => item.title.substring(0, 13) === resNeed)
         this.setState({
@@ -95,7 +95,6 @@ export default class Restaurants extends React.Component {
             showAllData: false
         })
         dataget.length ? null : this.setState({ showAllData: true })
-        console.log(dataget.length, resNeed)
     }
     // componentDidUpdate() {
     //     let { getDataSearch } = this.state
@@ -115,7 +114,6 @@ export default class Restaurants extends React.Component {
         return (
             <>
                 <div className="container">
-                    {console.log(showAllData, showSearchData)}
                     <div className="restaurants">
                         <div className="all-res-box">
                             <div className="box">
@@ -156,6 +154,7 @@ export default class Restaurants extends React.Component {
                         </div>
                     </div>
                 </div>
+                <Footer />
             </>
         )
     }

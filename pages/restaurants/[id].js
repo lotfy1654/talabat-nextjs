@@ -4,10 +4,10 @@ import { IoMdLocate } from "react-icons/io"
 import { BiRightArrow } from "react-icons/bi"
 import { AiFillStar, AiOutlineComment, AiFillFacebook, AiFillTwitterSquare } from "react-icons/ai"
 import { MdDoubleArrow } from "react-icons/md"
-
+import Footer from "../../Components/Footer/Footer"
 export default function Posts1(props) {
   return (
-    <div>
+    <>
       <div className="container">
         <div className="item-one-page">
           <div className="item-head">
@@ -136,7 +136,7 @@ export default function Posts1(props) {
                     <span><BsEmojiSmile /> very good</span>
                   </div>
                   <div className="text">
-                    <p>Order Packaging</p>
+                    <p>Value for money</p>
                   </div>
                 </div>
                 <div className="item col-sm-6 col-lg-3">
@@ -144,7 +144,7 @@ export default function Posts1(props) {
                     <span><BsEmojiSmile /> very good</span>
                   </div>
                   <div className="text">
-                    <p>Order Packaging</p>
+                    <p>Delivery time</p>
                   </div>
                 </div>
                 <div className="item col-sm-6 col-lg-3">
@@ -152,7 +152,7 @@ export default function Posts1(props) {
                     <span><BsEmojiSmile /> very good</span>
                   </div>
                   <div className="text">
-                    <p>Order Packaging</p>
+                    <p>Quality of food</p>
                   </div>
                 </div>
               </div>
@@ -228,10 +228,8 @@ export default function Posts1(props) {
           </div>
         </div>
       </div>
-      {/* <p>{props.postdata.title}</p>
-      <p>{props.postdata.id}</p>
-      <img src={props.postdata.thumbnailUrl} /> */}
-    </div>
+      <Footer />
+    </>
   );
 }
 

@@ -887,13 +887,23 @@
             grid-template-columns: repeat(auto-fill,minmax(200px,1fr));
             .res-item{
                 border: 2px solid #ddd;
+                background: #fff;
                 text-align: center;
+                cursor: pointer;
+                box-shadow: 0px 0px 15px #ddd;
                 // padding: 15px 5px;
                 border-radius: 15px;
                 -webkit-border-radius: 15px;
                 -moz-border-radius: 15px;
                 -ms-border-radius: 15px;
                 -o-border-radius: 15px;
+                transition: 0.4s;
+                @media (min-width: 770px){
+                    &:hover{
+                        transform: scale(1.1);
+                        box-shadow: 0px 0px 10px #333;
+                    }
+                }
                 .info-item{
                     border-top: 1px solid #ddd;
                     padding: 5px 0 10px 0;
@@ -918,6 +928,8 @@
     .item-head{
         box-shadow: 0px 0px 10px #333;
         border: 1px solid #ccc;
+        margin-bottom: 30px;
+        border-radius: 10px;
         .item-back{
             background-image: url(../images/brandpage-bg.webp);
             background-size: cover;
@@ -1221,6 +1233,7 @@
             .comment-items{
                 display: flex;
                 flex-direction: column;
+                margin-bottom: 25px;
                 .item{
                     background: #e9ecef;
                     padding: 10px;
@@ -1286,13 +1299,23 @@
         grid-template-columns: repeat(auto-fill,minmax(200px,1fr));
         .res-item{
             border: 2px solid #ddd;
+            background: #fff;
             text-align: center;
+            cursor: pointer;
+            box-shadow: 0px 0px 15px #ddd;
             // padding: 15px 5px;
             border-radius: 15px;
             -webkit-border-radius: 15px;
             -moz-border-radius: 15px;
             -ms-border-radius: 15px;
             -o-border-radius: 15px;
+            transition: 0.4s;
+            @media (min-width: 770px){
+                &:hover{
+                    transform: scale(1.1);
+                    box-shadow: 0px 0px 10px #333;
+                }
+            }
             .info-item{
                 border-top: 1px solid #ddd;
                 padding: 5px 0 10px 0;
@@ -1357,8 +1380,8 @@
             text-transform: capitalize;
             color: #fff;
             padding: 5px 10px;
+            text-decoration: none;
             &:hover{
-                text-decoration: none;
                 color: var(--main-color);
             }
         }
@@ -1411,6 +1434,7 @@
         display: none;
         .footer-sm-items{
             .item{
+                transition: 0.3s;
                 .item-head{
                     display: flex;
                     justify-content: space-between;

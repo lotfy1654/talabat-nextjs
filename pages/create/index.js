@@ -1,4 +1,5 @@
 import React from "react"
+import Footer from "../../Components/Footer/Footer"
 class Create extends React.Component {
     state = {}
     render() {
@@ -138,6 +139,7 @@ class Create extends React.Component {
                         </div>
                     </div>
                 </div>
+                <Footer />
             </>
         );
     }

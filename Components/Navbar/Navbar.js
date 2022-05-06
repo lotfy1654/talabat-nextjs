@@ -40,13 +40,13 @@ function Navbar() {
               </Link>
             </li>
             <li>
-              <Link className="link" href="/partner">
-                Partner
+              <Link className="link" href="/restaurants">
+                Restaurants
               </Link>
             </li>
             <li>
-              <Link className="link" href="/restaurants">
-                Restaurants
+              <Link className="link" href="/partner">
+                Partner
               </Link>
             </li>
             <li className="login-nav-link">

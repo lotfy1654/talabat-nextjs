@@ -21,15 +21,15 @@ export default class TabOne extends Component {
         );
         const postData = slice.map((ele, index) => (
             <React.Fragment key={ele.id}>
-                <div className="res-item">
-                    <img className="res-img" src={ele.thumbnailUrl} alt={ele.id} />
-                    <div className="info-item">
-                        <Link href={`/restaurants/${ele.id}`}>
+                <Link href={`/offers/${ele.id}`}>
+                    <div className="res-item">
+                        <img className="res-img" src={ele.thumbnailUrl} alt={ele.id} />
+                        <div className="info-item">
                             <p>{`${ele.title.substring(0, 13)}`}</p>
-                        </Link>
-                        <p>{`${ele.title.substring(0, 19)}..${ele.id}..`}</p>
+                            <p>{`${ele.title.substring(0, 19)}..${ele.id}..`}</p>
+                        </div>
                     </div>
-                </div>
+                </Link>
             </React.Fragment>
         ));
 
