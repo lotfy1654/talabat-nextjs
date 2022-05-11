@@ -1,8 +1,10 @@
-import React, { useState, useEffect } from "react";
+import React, { Component } from "react";
 import Link from "next/link";
 import ReactPaginate from "react-paginate";
 import SearchComponent from "./Search";
 import Footer from "../../Components/Footer/Footer"
+import Image from "next/image"
+import ImagePlaceholder from "/images/img-placeholder.svg"
 
 
 export default class Restaurants extends React.Component {
@@ -21,6 +23,9 @@ export default class Restaurants extends React.Component {
         this.handlePageClick = this.handlePageClick.bind(this);
     }
     dataShow = () => {
+        const images = {
+            domains: ['https://via.placeholder.com/']
+        };
         const { allRestaurents } = this.props
         const slice = allRestaurents.slice(
             this.state.offset,
@@ -29,9 +34,14 @@ export default class Restaurants extends React.Component {
 
         const postData = slice.map((ele) => (
             <React.Fragment key={ele.id}>
-                <Link href={`/restaurants/${ele.id}`}>
+                <Link href={`/restaurants/${ele.id}`} passHref>
                     <div className="res-item">
-                        <img className="res-img" src={ele.thumbnailUrl} alt={ele.id} />
+                        <Image
+                            className="res-img"
+                            src={ImagePlaceholder}
+                            alt={ele.id}
+                            width={150}
+                            height={150} />
                         <div className="info-item">
                             <div>
                                 <p>
@@ -110,7 +120,7 @@ export default class Restaurants extends React.Component {
 
     render() {
 
-        let { showAllData, showSearchData } = this.state
+        let { showAllData, showSearchData } = this.state;
         return (
             <>
                 <div className="container">
@@ -170,4 +180,5 @@ export async function getStaticProps() {
         },
     };
 }
+
 

@@ -809,6 +809,13 @@
                     .app-img{
                         margin-right: 10px !important;
                     }
+                    .item{
+                        width: 160px;
+                        margin: 5px;
+                        img{
+                            margin: 0 !important;
+                        }
+                    }
                 }
                 @media (max-width: 768px){
                     justify-content: flex-start;
@@ -913,7 +920,7 @@
                     }
                 }
                 .res-img{
-                    padding: 15px;
+                    padding: 5px !important;
                 }
                 .res-info{
                     // border-top: 2px solid #ddd;
@@ -1034,13 +1041,14 @@
                         display: flex;
                         align-items: center;
                         .item{
+                            width: 40px;
+                            margin: 0 3px;
                             &.icon{
                                 color: #ddd;
                                 font-size: 22px;
                             }
                             img{
-                                width: 35px;
-                                margin: 0 3px;
+                                width: 100% !important;
                             }
                         }
                     }
@@ -1137,13 +1145,20 @@
                 .item{
                     text-align: center;
                     margin: 10px 0;
-                    img{
-                        width: 100%;
-                        border-radius: 10px;
-                        transition: 0.3s;
+                    .box{
+                        img{
+                            width: 100%;
+                            border-radius: 10px;
+                        }
+                        span:first-of-type{
+                            transition: 0.3s;
+                        }
                         @media(min-width: 770px){
                             &:hover{
-                                transform: scale(1.7);
+                                span:first-of-type{
+                                    z-index: 1000 !important;
+                                    transform: scale(1.2);
+                                }
                             }
                         }
                     }
@@ -1325,7 +1340,7 @@
                 }
             }
             .res-img{
-                padding: 15px;
+                padding: 5px !important;
             }
             .res-info{
                 // border-top: 2px solid #ddd;
@@ -1638,12 +1653,12 @@
                     div{
                         width: 45px;
                         padding: 5px;
-                        background: #fff;
-                        border-bottom: 1px solid #ddd;
+                        // background: #fff;
+                        // border-bottom: 1px solid #ddd;
                         box-shadow: 0px 1px 10px #ddd;
                         .img{
-                            width: 100%;
-                            height: 100%;
+                            width: 100% !important;
+                            height: 100% !important;
                         }
                     }
                 }

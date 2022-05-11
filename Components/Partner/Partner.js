@@ -12,8 +12,8 @@ import Fleet from "/images/fleet-min.png";
 import Order from "/images/order_placed.svg";
 import Prep from "/images/prep.svg";
 import Delivered from "/images/delivered.svg";
-import GooglePlay from "/images/google_play.svg";
-import AppStore from "/images/appstore.svg";
+import GooglePlay from "/images/google_playPartner.svg";
+import AppStore from "/images/appstorePartner.svg";
 import {
   FaFacebookF,
   FaTwitter,
@@ -255,10 +255,14 @@ class Partner extends React.Component {
               </div>
               <div className="box-item">
                 <div className="box-apps">
-                  <img className="app-img" src={`https://ae.partner.talabat.com/resource/SSUTalabat/assets/images/google_play.svg`} alt="." />
+                  <div className="item">
+                    <Image src={GooglePlay} layout='responsive' className="app-img" alt="." />
+                  </div>
                   {/* <span className="mr-3"> */}
                   {/* </span> */}
-                  <img className="app-img" src={`https://ae.partner.talabat.com/resource/SSUTalabat/assets/images/appstore.svg`} alt="." />
+                  <div className="item">
+                    <Image layout='responsive' src={AppStore} className="app-img" alt="." />
+                  </div>
                 </div>
               </div>
             </div>

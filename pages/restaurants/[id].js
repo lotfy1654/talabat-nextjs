@@ -5,6 +5,15 @@ import { BiRightArrow } from "react-icons/bi"
 import { AiFillStar, AiOutlineComment, AiFillFacebook, AiFillTwitterSquare } from "react-icons/ai"
 import { MdDoubleArrow } from "react-icons/md"
 import Footer from "../../Components/Footer/Footer"
+import Image from "next/image"
+import ImagePlaceholder from "/images/img-placeholder.svg"
+import VisaImg from "/images/visa.png"
+import MasterCard from "/images/mastercard.svg"
+import Cash from "/images/logo-cash.svg"
+import Drinks from "/images/Drinks.webp"
+import Savoryres from "/images/Savoryres.webp"
+import SavoryTwo from "/images/savoryresTwo.webp"
+import DrinkTwo from "/images/drinkTwo.webp"
 export default function Posts1(props) {
   return (
     <>
@@ -14,7 +23,7 @@ export default function Posts1(props) {
             <div className="item-back">
               <div className="item-info">
                 <div className="item-img">
-                  <img src={props.postdata.thumbnailUrl} />
+                  <Image src={ImagePlaceholder} width={150} height={150} alt={props.postdata.id} />
                 </div>
                 <div className="item-text">
                   <h3>{props.postdata.title.substring(0, 13)} {props.postdata.id}</h3>
@@ -49,13 +58,13 @@ export default function Posts1(props) {
                   <div className="box-pay">
                     <span className="item icon"><MdDoubleArrow /></span>
                     <span className="item">
-                      <img src="https://cdn4.iconfinder.com/data/icons/payment-method/160/payment_method_card_visa-256.png" />
+                      <Image src={VisaImg} layout='responsive' alt={props.postdata.id} />
                     </span>
                     <span className="item">
-                      <img src="https://www.talabat.com/assets/images/logo-mastercard.svg" />
+                      <Image src={MasterCard} layout='responsive' alt={props.postdata.id} />
                     </span>
                     <span className="item">
-                      <img src="https://www.talabat.com/assets/images/logo-cash.svg" />
+                      <Image src={Cash} layout='responsive' alt={props.postdata.id} />
                     </span>
                   </div>
                 </div>
@@ -86,22 +95,30 @@ export default function Posts1(props) {
               </div>
               <div className="items-box row">
                 <div className="item col-sm-6 col-lg-3">
-                  <img src={`https://images.deliveryhero.io/image/talabat/MenuItems/20190819_Talabat_UAE_637019334074925990.jpg`} />
+                  <div className="box">
+                    <Image src={Drinks} layout="intrinsic" alt={props.postdata.id} />
+                  </div>
                   <p className="title-item">From Drinks:</p>
                   <p className="food">Iced Spanish Latte</p>
                 </div>
                 <div className="item col-sm-6 col-lg-3">
-                  <img src={`https://images.deliveryhero.io/image/talabat/MenuItems/20190819_Talabat_UAE_637019330882774464.jpg`} />
+                  <div className="box">
+                    <Image layout="intrinsic" src={Savoryres} alt={props.postdata.id} />
+                  </div>
                   <p className="title-item">From Savory:</p>
                   <p className="food">Grilled Cheese</p>
                 </div>
                 <div className="item col-sm-6 col-lg-3">
-                  <img src={`https://images.deliveryhero.io/image/talabat/MenuItems/Healthy_Chicken_Sand_637595382629767521.jpg`} />
+                  <div className="box">
+                    <Image layout="intrinsic" src={SavoryTwo} alt={props.postdata.id} />
+                  </div>
                   <p className="title-item">From Savory:</p>
                   <p className="food">Healthy Chicken Sandwich</p>
                 </div>
                 <div className="item col-sm-6 col-lg-3">
-                  <img src={`https://images.deliveryhero.io/image/talabat/MenuItems/20190819_Talabat_UAE_637019334138787238.jpg`} />
+                  <div className="box">
+                    <Image layout="intrinsic" src={DrinkTwo} alt={props.postdata.id} />
+                  </div>
                   <p className="title-item">From Savory:</p>
                   <p className="food">Sparkling Cascara</p>
                 </div>

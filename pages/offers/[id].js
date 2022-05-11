@@ -4,6 +4,16 @@ import { IoMdLocate } from "react-icons/io"
 import { BiRightArrow } from "react-icons/bi"
 import { AiFillStar, AiOutlineComment, AiFillFacebook, AiFillTwitterSquare } from "react-icons/ai"
 import { MdDoubleArrow } from "react-icons/md"
+import Image from "next/image"
+import ImagePlaceholder from "/images/img-placeholder.svg"
+import VisaImg from "/images/visa.png"
+import MasterCard from "/images/mastercard.svg"
+import Cash from "/images/logo-cash.svg"
+import Starters from "/images/offerone.webp"
+import Tacos from "/images/offerTwo.webp"
+import Pizza from "/images/offerthree.webp"
+import Appetizers from "/images/offerfour.webp"
+
 
 export default function Posts1(props) {
     return (
@@ -14,7 +24,7 @@ export default function Posts1(props) {
                         <div className="item-back">
                             <div className="item-info">
                                 <div className="item-img">
-                                    <img src={props.postdata.thumbnailUrl} />
+                                    <Image src={ImagePlaceholder} width={150} height={150} alt={props.postdata.id} />
                                 </div>
                                 <div className="item-text">
                                     <h3>{props.postdata.title.substring(0, 13)} {props.postdata.id}</h3>
@@ -49,13 +59,13 @@ export default function Posts1(props) {
                                     <div className="box-pay">
                                         <span className="item icon"><MdDoubleArrow /></span>
                                         <span className="item">
-                                            <img src="https://cdn4.iconfinder.com/data/icons/payment-method/160/payment_method_card_visa-256.png" />
+                                            <Image src={VisaImg} layout='responsive' alt={props.postdata.id} />
                                         </span>
                                         <span className="item">
-                                            <img src="https://www.talabat.com/assets/images/logo-mastercard.svg" />
+                                            <Image src={MasterCard} layout='responsive' alt={props.postdata.id} />
                                         </span>
                                         <span className="item">
-                                            <img src="https://www.talabat.com/assets/images/logo-cash.svg" />
+                                            <Image src={Cash} layout='responsive' alt={props.postdata.id} />
                                         </span>
                                     </div>
                                 </div>
@@ -86,22 +96,30 @@ export default function Posts1(props) {
                             </div>
                             <div className="items-box row">
                                 <div className="item col-sm-6 col-lg-3">
-                                    <img src={`https://images.deliveryhero.io/image/talabat/MenuItems/L_Cheddar_cheese_Jal_636358804019771335.jpg`} />
+                                    <div className="box">
+                                        <Image src={Starters} layout='responsive' alt={props.postdata.id} />
+                                    </div>
                                     <p className="title-item">From Starters:</p>
                                     <p className="food">Cheddar Cheese Jalapeños</p>
                                 </div>
                                 <div className="item col-sm-6 col-lg-3">
-                                    <img src={`https://images.deliveryhero.io/image/talabat/MenuItems/blob_637389059711476019`} />
+                                    <div className="box">
+                                        <Image src={Tacos} layout='responsive' alt={props.postdata.id} />
+                                    </div>
                                     <p className="title-item">From Tacos:</p>
                                     <p className="food">Shrimps Tacos</p>
                                 </div>
                                 <div className="item col-sm-6 col-lg-3">
-                                    <img src={`https://images.deliveryhero.io/image/talabat/MenuItems/blob_637408107892377252`} />
+                                    <div className="box">
+                                        <Image src={Pizza} layout='responsive' alt={props.postdata.id} />
+                                    </div>
                                     <p className="title-item">From Pizza:</p>
                                     <p className="food">Margherita Pizza</p>
                                 </div>
                                 <div className="item col-sm-6 col-lg-3">
-                                    <img src={`https://images.deliveryhero.io/image/talabat/MenuItems/blob_637407997865503737`} />
+                                    <div className="box">
+                                        <Image src={Appetizers} layout='responsive' alt={props.postdata.id} />
+                                    </div>
                                     <p className="title-item">From Appetizers:</p>
                                     <p className="food">Chicken Strips</p>
                                 </div>
@@ -212,9 +230,6 @@ export default function Posts1(props) {
                     </div>
                 </div>
             </div>
-            {/* <p>{props.postdata.title}</p>
-      <p>{props.postdata.id}</p>
-      <img src={props.postdata.thumbnailUrl} /> */}
         </div>
     );
 }

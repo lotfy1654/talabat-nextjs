@@ -3,6 +3,11 @@ import Image from "next/image";
 import Appstore from "../../images/logo_appstore.svg";
 import PalyStore from "/images/logo_playstore.svg";
 import HuaweiStore from "/images/logo_huaweistore1.svg";
+import VerticalRestaurants from "../../images/vertical-restaurants.webp"
+import VerticalGrocery from "../../images/vertical-grocery.webp"
+import VerticalPharmacy from "../../images/vertical-pharmacy.webp"
+import VerticalFlowers from "../../images/vertical-flowers.webp"
+
 
 export default function Shops() {
   return (
@@ -24,7 +29,7 @@ export default function Shops() {
           <div className="col-sm col-md-6">
             <div className="box">
               <div className="img-box res">
-                <img src={`https://www.talabat.com/images/Talabat/vertical-restaurants.png`} alt="..." />
+                <Image src={VerticalRestaurants} alt="..." />
               </div>
               <div className="box-info">
                 <h4>restaurants</h4>
@@ -39,7 +44,7 @@ export default function Shops() {
           <div className="col-sm col-md-6">
             <div className="box">
               <div className="img-box gro">
-                <img src={`https://www.talabat.com/images/Talabat/vertical-restaurants.png`} alt="..." />
+                <Image src={VerticalGrocery} alt="..." />
               </div>
               <div className="box-info">
                 <h4>grocery</h4>
@@ -56,7 +61,7 @@ export default function Shops() {
           <div className="col-sm col-md-6">
             <div className="box">
               <div className="img-box phar">
-                <img src={`https://www.talabat.com/images/Talabat/vertical-pharmacy.png`} alt="..." />
+                <Image src={VerticalPharmacy} alt="..." />
               </div>
               <div className="box-info">
                 <h4>pharmacy</h4>
@@ -71,7 +76,7 @@ export default function Shops() {
           <div className="col-sm col-md-6">
             <div className="box">
               <div className="img-box phar">
-                <img src={`https://www.talabat.com/images/Talabat/vertical-flowers.png`} alt="..." />
+                <Image src={VerticalFlowers} alt="..." />
               </div>
               <div className="box-info">
                 <h4>Flowers</h4>

@@ -1,5 +1,9 @@
 import React from "react"
 import Footer from "../../Components/Footer/Footer"
+import Image from "next/image"
+import Link from "next/link"
+import GoogleIcon from "../../images/google-icon.png"
+import FacebookIcon from "../../images/facebook.png"
 class Create extends React.Component {
     state = {}
     render() {
@@ -15,7 +19,7 @@ class Create extends React.Component {
                                 <div className="item">
                                     <div className="icon">
                                         <div>
-                                            <img className="img" src="https://cdn3.iconfinder.com/data/icons/logos-brands-3/24/logo_brand_brands_logos_google-256.png" alt=".." />
+                                            <Image className="img" src={GoogleIcon} alt=".." />
                                         </div>
                                     </div>
                                     <div className="title">
@@ -27,7 +31,7 @@ class Create extends React.Component {
                                 <div className="item">
                                     <div className="icon">
                                         <div>
-                                            <img className="img" src="https://cdn2.iconfinder.com/data/icons/social-media-2285/512/1_Facebook2_colored_svg-128.png" alt=".." />
+                                            <Image className="img" src={FacebookIcon} alt=".." />
                                         </div>
                                     </div>
                                     <div className="title">
@@ -85,11 +89,11 @@ class Create extends React.Component {
                                         <div className="input-filed radio-inputs">
                                             <div className="radio-input">
                                                 <input type="radio" name="male" id="gender" value="male" />
-                                                <label for="male">male</label>
+                                                <label htmlFor="male">male</label>
                                             </div>
                                             <div className="radio-input">
                                                 <input type="radio" name="Female" id="gender" value="Female" />
-                                                <label for="Female">Female</label>
+                                                <label htmlFor="Female">Female</label>
                                             </div>
                                         </div>
                                     </label>
@@ -107,7 +111,7 @@ class Create extends React.Component {
                                         <div className="head">Subscribe to our Newsletter</div>
                                         <div className="input-filed">
                                             <input type="radio" name="newsletter" id="newsletter" />
-                                            <label for="newsletter">Subscribe to our Newsletter</label>
+                                            <label htmlFor="newsletter">Subscribe to our Newsletter</label>
                                         </div>
                                     </label>
                                 </div>
@@ -116,7 +120,7 @@ class Create extends React.Component {
                                         <div className="head">Subscribe to SMS</div>
                                         <div className="input-filed">
                                             <input type="radio" name="SMS" id="SMS" />
-                                            <label for="SMS">Subscribe to SMS</label>
+                                            <label htmlFor="SMS">Subscribe to SMS</label>
                                         </div>
                                     </label>
                                 </div>
@@ -132,7 +136,7 @@ class Create extends React.Component {
                                 </div>
                                 <div className="item line-item">
                                     <label>
-                                        Already have an account? <a href="/login">Login</a>
+                                        Already have an account? <Link href="/login">Login</Link>
                                     </label>
                                 </div>
                             </div>

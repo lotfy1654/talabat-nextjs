@@ -1,6 +1,10 @@
 import React from "react";
 import Login from "../../Components/Login/Login";
 import { AiFillFacebook } from "react-icons/ai";
+import GoogleIcon from "../../images/google-icon.png"
+import FacebookIcon from "../../images/facebook.png"
+import Link from "next/link";
+import Image from "next/image"
 class LoginPage extends React.Component {
   render() {
     return (
@@ -16,7 +20,7 @@ class LoginPage extends React.Component {
                 <div className="item">
                   <div className="icon">
                     <div>
-                      <img className="img" src="https://cdn3.iconfinder.com/data/icons/logos-brands-3/24/logo_brand_brands_logos_google-256.png" alt=".." />
+                      <Image className="img" src={GoogleIcon} alt=".." />
                     </div>
                   </div>
                   <div className="title">
@@ -28,7 +32,7 @@ class LoginPage extends React.Component {
                 <div className="item">
                   <div className="icon">
                     <div>
-                      <img className="img" src="https://cdn2.iconfinder.com/data/icons/social-media-2285/512/1_Facebook2_colored_svg-128.png" alt=".." />
+                      <Image className="img" src={FacebookIcon} alt=".." />
                     </div>
                   </div>
                   <div className="title">
@@ -59,7 +63,7 @@ class LoginPage extends React.Component {
                   <button className="btn">login</button>
                 </div>
                 <div className="item create">
-                  <span>Don't have an account? <a href="/create">Create an account</a></span>
+                  <span>Don{"'"}t have an account? <Link href="/create">Create an account</Link></span>
                 </div>
               </div>
             </div>

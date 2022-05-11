@@ -14,3 +14,4 @@ class OffersPage extends React.Component {
 }
 
 export default OffersPage;
+
