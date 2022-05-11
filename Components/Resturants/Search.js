@@ -1,4 +1,3 @@
-import React from "react"
 import Link from "next/link"
 import Image from "next/image"
 import ImagePlaceholder from "/images/img-placeholder.svg"
@@ -7,7 +6,7 @@ function SearchComponent({ getDataSearch }) {
         <div className="sort-data">
             {
                 getDataSearch.map(item => (
-                    <React.Fragment key={item.id}>
+                    <div key={item.id}>
                         <Link href={`/restaurants/${item.id}`} passHref>
                             <div className="res-item">
                                 <Image className="res-img"
@@ -21,7 +20,7 @@ function SearchComponent({ getDataSearch }) {
                                 </div>
                             </div>
                         </Link>
-                    </React.Fragment>
+                    </div>
                 ))
             }
         </div>

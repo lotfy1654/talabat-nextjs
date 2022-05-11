@@ -1,7 +1,7 @@
-import React, { Component } from "react";
+import React from "react";
 import Link from "next/link";
 import ReactPaginate from "react-paginate";
-import SearchComponent from "./Search";
+import SearchComponent from "../../Components/Resturants/Search";
 import Footer from "../../Components/Footer/Footer"
 import Image from "next/image"
 import ImagePlaceholder from "/images/img-placeholder.svg"
